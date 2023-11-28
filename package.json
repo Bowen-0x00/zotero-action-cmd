@@ -1,16 +1,16 @@
 {
-  "name": "zotero-addon-template",
-  "version": "1.0.2",
-  "description": "Zotero Addon Template",
+  "name": "zotero-action-cmd",
+  "version": "1.0.0",
+  "description": "Zotero Action CMD",
   "config": {
-    "addonName": "Zotero Addon Template",
-    "addonID": "addontemplate@euclpts.com",
-    "addonRef": "addontemplate",
-    "addonInstance": "AddonTemplate",
-    "prefsPrefix": "extensions.zotero.addontemplate",
-    "releasePage": "https://github.com/windingwind/zotero-addon-template/releases",
-    "updateJSON": "https://raw.githubusercontent.com/windingwind/zotero-addon-template/main/update.json",
-    "updateBetaJSON": "https://raw.githubusercontent.com/windingwind/zotero-addon-template/main/update-beta.json"
+    "addonName": "Zotero Action CMD",
+    "addonID": "ZoteroActionCMD",
+    "addonRef": "ZoteroActionCMD",
+    "addonInstance": "ZoteroActionCMD",
+    "prefsPrefix": "extensions.zotero.ZoteroActionCMD",
+    "releasePage": "https://github.com/Bowen-0x00/zotero-action-cmd/releases",
+    "updateJSON": "https://github.com/Bowen-0x00/zotero-action-cmd/main/update.json",
+    "updateBetaJSON": "https://github.com/Bowen-0x00/zotero-action-cmd/main/update-beta.json"
   },
   "main": "src/index.ts",
   "scripts": {
@@ -33,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/windingwind/zotero-addon-template.git"
+    "url": "git+https://github.com/Bowen-0x00/zotero-action-cmd.git"
   },
-  "author": "windingwind",
+  "author": "ymjr",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/windingwind/zotero-addon-template/issues"
+    "url": "https://github.com/Bowen-0x00/zotero-action-cmd/issues"
   },
-  "homepage": "https://github.com/windingwind/zotero-addon-template#readme",
+  "homepage": "https://github.com/Bowen-0x00/zotero-action-cmd#readme",
   "dependencies": {
     "zotero-plugin-toolkit": "^2.3.6"
   },
