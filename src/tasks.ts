@@ -1,7 +1,149 @@
-export interface MenuTask {
-    id: string,
-    pdfUrl: string
+export type MenuTask = {
+    [key in keyof typeof emptyMenuTask]: any;
 }
+
+const emptyMenuTask = {
+    title: "",
+    firstCreator: "",
+    abstractNote: "",
+    artworkMedium: "",
+    medium: "",
+    artworkSize: "",
+    date: "",
+    language: "",
+    shortTitle: "",
+    archive: "",
+    archiveLocation: "",
+    libraryCatalog: "",
+    callNumber: "",
+    url: "",
+    accessDate: "",
+    rights: "",
+    extra: "",
+    audioRecordingFormat: "",
+    seriesTitle: "",
+    volume: "",
+    numberOfVolumes: "",
+    place: "",
+    label: "",
+    publisher: "",
+    runningTime: "",
+    ISBN: "",
+    billNumber: "",
+    number: "",
+    code: "",
+    codeVolume: "",
+    section: "",
+    codePages: "",
+    pages: "",
+    legislativeBody: "",
+    session: "",
+    history: "",
+    blogTitle: "",
+    publicationTitle: "",
+    websiteType: "",
+    type: "",
+    series: "",
+    seriesNumber: "",
+    edition: "",
+    numPages: "",
+    bookTitle: "",
+    caseName: "",
+    court: "",
+    dateDecided: "",
+    docketNumber: "",
+    reporter: "",
+    reporterVolume: "",
+    firstPage: "",
+    versionNumber: "",
+    system: "",
+    company: "",
+    programmingLanguage: "",
+    proceedingsTitle: "",
+    conferenceName: "",
+    DOI: "",
+    dictionaryTitle: "",
+    subject: "",
+    encyclopediaTitle: "",
+    distributor: "",
+    genre: "",
+    videoRecordingFormat: "",
+    forumTitle: "",
+    postType: "",
+    committee: "",
+    documentNumber: "",
+    interviewMedium: "",
+    issue: "",
+    seriesText: "",
+    journalAbbreviation: "",
+    ISSN: "",
+    letterType: "",
+    manuscriptType: "",
+    mapType: "",
+    scale: "",
+    country: "",
+    assignee: "",
+    issuingAuthority: "",
+    patentNumber: "",
+    filingDate: "",
+    applicationNumber: "",
+    priorityNumbers: "",
+    issueDate: "",
+    references: "",
+    legalStatus: "",
+    episodeNumber: "",
+    audioFileType: "",
+    repository: "",
+    archiveID: "",
+    citationKey: "",
+    presentationType: "",
+    meetingName: "",
+    programTitle: "",
+    network: "",
+    reportNumber: "",
+    reportType: "",
+    institution: "",
+    nameOfAct: "",
+    codeNumber: "",
+    publicLawNumber: "",
+    dateEnacted: "",
+    thesisType: "",
+    university: "",
+    studio: "",
+    websiteTitle: "",
+    id: "",
+    year: "",
+    itemID: "",
+    itemTypeID: "",
+    dateAdded: "",
+    dateModified: "",
+    libraryID: "",
+    key: "",
+    version: "",
+    synced: "",
+    createdByUserID: "",
+    lastModifiedByUserID: "",
+    sortCreator: "",
+    deleted: "",
+    inPublications: "",
+    parentID: "",
+    parentKey: "",
+    attachmentCharset: "",
+    attachmentLinkMode: "",
+    attachmentContentType: "",
+    attachmentPath: "",
+    attachmentSyncState: "",
+    attachmentSyncedModificationTime: "",
+    attachmentSyncedHash: "",
+    attachmentLastProcessedModificationTime: "",
+    feedItemGUID: "",
+    feedItemReadTime: "",
+    feedItemTranslatedTime: ""
+}
+
+type Item = {
+    [key in Zotero.Item.ItemField]: string;
+};
 
 export function addMenuTask(
     itemId: number
@@ -14,10 +156,16 @@ export function addMenuTask(
             const attachment = Zotero.Items.get(attachments[0]);
 
             if (attachment.isPDFAttachment()) {
-                const newTask: MenuTask = {
-                    id: item.getField("id") as string,
-                    pdfUrl: attachment.getFilePath() as string
-                };
+                const newTask = {}
+                for (const key of Object.keys(emptyMenuTask)) {
+                    (newTask as any)[key] = item.getField(key as Zotero.Item.ItemField)
+                }
+                (newTask as any).pdfUrl = attachment.getFilePath() as string
+                (newTask as any).attachment = {}
+                for (const key of Object.keys(emptyMenuTask)) {
+                    (newTask as any).attachment[key] = attachment.getField(key as Zotero.Item.ItemField)
+                }
+                (newTask as any).tags = item.getTags()
                 ztoolkit.log("MenuTask -----------------------------------------------------");
                 ztoolkit.log(newTask)
                 return newTask
