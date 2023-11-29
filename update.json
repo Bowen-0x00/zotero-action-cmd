@@ -1,10 +1,10 @@
 {
   "addons": {
-    "addontemplate@euclpts.com": {
+    "ZoteroActionCMD": {
       "updates": [
         {
-          "version": "1.0.2",
-          "update_link": "https://github.com/windingwind/zotero-addon-template/releases/latest/download/zotero-addon-template.xpi",
+          "version": "1.0.0",
+          "update_link": "https://github.com/Bowen-0x00/zotero-action-cmd/releases/latest/download/zotero-action-cmd.xpi",
           "applications": {
             "zotero": {
               "strict_min_version": "6.999"

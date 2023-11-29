@@ -1,6 +1,6 @@
 startup-begin = Addon is loading
 startup-finish = Addon is ready
-menuitem-label = Addon Template: Helper Examples
+menuitem-label = Action-cmd: menu action
 menupopup-label = Addon Template: Menupopup
 menuitem-submenulabel = Addon Template
 menuitem-filemenulabel = Addon Template: File Menuitem

@@ -1,4 +1,4 @@
-pref-title = 插件模板设置示例
+pref-title = 目前设置在"设置/高级/编辑器"下
 pref-enable =
     .label = 开启
 pref-input = 输入

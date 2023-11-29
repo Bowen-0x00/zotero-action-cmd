@@ -1,4 +1,4 @@
-pref-title = Addon Template Example
+pref-title = See settings in Settings/Advanced/Config Editor
 pref-enable =
     .label = Enable
 pref-input = Input
