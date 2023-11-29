@@ -3,7 +3,7 @@
 Zotero Action Cmd is a plugin for Zotero that allows executing commands when performing actions in Zotero. These commands can be system commands, Python scripts, JavaScript scripts, Java programs, C# programs, HTTP requests, and more. The purpose of this plugin is to handle parts of the workflow in an external program that are difficult to handle within the Zotero environment.
 
 ## Features
-
+![example](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/zotero-eagle1.gif)
 Right-click on an item in Zotero to bring up a button menu.
 Click on the button menu to execute one of the following types of commands:
 Execute a local JavaScript file.
