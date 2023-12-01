@@ -25,6 +25,18 @@ In the button menu that appears, select the type of command you want to execute.
 Enter the necessary parameters or select a file based on the command type's requirements.
 Execute the command.
 
+### Settings
+See settings in Settings/Advanced/Config Editor
+
+![step1](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings1.png)
+![step2](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings2.png)
+
+mode: 1/2/3 represents: local JS/command/HTTP request, respectively using corresponding parameters.
+
+Right-click on the item and then click the button to perform the corresponding operation.
+
+
+
 ## Notes
 
 Exercise caution when executing system commands and ensure that the commands are safe and reliable.

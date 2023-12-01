@@ -3,7 +3,7 @@
     "ZoteroActionCMD": {
       "updates": [
         {
-          "version": "1.0.1",
+          "version": "1.0.2",
           "update_link": "https://github.com/Bowen-0x00/zotero-action-cmd/releases/latest/download/zotero-action-cmd.xpi",
           "applications": {
             "zotero": {

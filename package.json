@@ -1,6 +1,6 @@
 {
   "name": "zotero-action-cmd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zotero Action CMD",
   "config": {
     "addonName": "Zotero Action CMD",

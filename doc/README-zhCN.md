@@ -25,6 +25,16 @@ Zotero Action Cmd 是一个用于 Zotero 的插件，它允许在执行 Zotero �
 根据命令类型的要求，输入必要的参数或选择文件。
 执行命令。
 
+## 设置
+目前设置在"设置/高级/编辑器"下
+
+![step1](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings1.png)
+![step2](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings2.png)
+
+mode:1/2/3代表：本地js/命令/HTTP请求，分别使用对应参数。
+
+右键条目然后点击按钮进行对应操作。
+
 ## 注意事项
 
 在执行系统命令时，请谨慎操作，确保命令是安全且可靠的。

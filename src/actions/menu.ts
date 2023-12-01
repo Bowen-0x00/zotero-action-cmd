@@ -3,6 +3,7 @@ import { config } from "../../package.json"
 
 
 export async function menuAction(task: MenuTask) {
+    if (!task) return
     const mode = Zotero.Prefs.get(`${config.addonRef}.menu.mode`) as number
     const args = (Zotero.Prefs.get(`${config.addonRef}.menu.args`) as string).split(/\s*,\s*/).map(el => el.trim().replace(/^\"|\"$/g, "")).filter(el => el) as Array<any>
     (args as Array<any>).push(task)

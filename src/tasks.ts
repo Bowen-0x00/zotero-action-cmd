@@ -150,20 +150,27 @@ export function addMenuTask(
 ) {
     const item = Zotero.Items.get(itemId);
     // item.getBestAttachment()
+    const newTask = {}
     if (item?.isRegularItem()) {
         const attachments = item.getAttachments();
         if (attachments && attachments.length) {
-            const attachment = Zotero.Items.get(attachments[0]);
+            let attachmentPdf;
+            for (const a of attachments) {
+                const attachment = Zotero.Items.get(a);
+                if (attachment.isPDFAttachment()) {
+                    attachmentPdf = attachment;
+                }
+            }
 
-            if (attachment.isPDFAttachment()) {
-                const newTask = {}
+            if (attachmentPdf && attachmentPdf.isPDFAttachment()) {
+
                 for (const key of Object.keys(emptyMenuTask)) {
                     (newTask as any)[key] = item.getField(key as Zotero.Item.ItemField)
                 }
-                (newTask as any).pdfUrl = attachment.getFilePath() as string
+                (newTask as any).pdfUrl = attachmentPdf.getFilePath() as string
                 (newTask as any).attachment = {}
                 for (const key of Object.keys(emptyMenuTask)) {
-                    (newTask as any).attachment[key] = attachment.getField(key as Zotero.Item.ItemField)
+                    (newTask as any).attachment[key] = attachmentPdf.getField(key as Zotero.Item.ItemField)
                 }
                 (newTask as any).tags = item.getTags()
                 ztoolkit.log("MenuTask -----------------------------------------------------");
@@ -171,5 +178,14 @@ export function addMenuTask(
                 return newTask
             }
         }
+    } else if (item?.isPDFAttachment()) {
+        (newTask as any).pdfUrl = item.getFilePath() as string
+        (newTask as any).attachment = {}
+        for (const key of Object.keys(emptyMenuTask)) {
+            (newTask as any).attachment[key] = item.getField(key as Zotero.Item.ItemField)
+        }
+        (newTask as any).tags = item.getTags()
+        return newTask
     }
+    return undefined
 }
