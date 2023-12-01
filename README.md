@@ -28,8 +28,8 @@ Execute the command.
 ### Settings
 See settings in Settings/Advanced/Config Editor
 
-![step1](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings1.png)
-![step2](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings2.png)
+![step1](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings_step1.png)
+![step2](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings_step2.png)
 
 mode: 1/2/3 represents: local JS/command/HTTP request, respectively using corresponding parameters.
 

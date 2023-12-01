@@ -28,8 +28,8 @@ Zotero Action Cmd 是一个用于 Zotero 的插件，它允许在执行 Zotero �
 ## 设置
 目前设置在"设置/高级/编辑器"下
 
-![step1](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings1.png)
-![step2](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings2.png)
+![step1](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings_step1.png)
+![step2](https://github.com/Bowen-0x00/zotero-action-cmd/blob/main/images/settings_step1.png)
 
 mode:1/2/3代表：本地js/命令/HTTP请求，分别使用对应参数。
 
